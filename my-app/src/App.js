@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { createElement } from 'react';
 
 // Императивный стиль везде, кроме функции getFullYear(). Ее использование - декларативный стиль.
 export const App = () => {
@@ -17,4 +18,24 @@ export const App = () => {
 			</header>
 		</div>
 	);
+};
+
+// Создание элементов - декларативный стиль
+export const AppWithoutJSX = () => {
+	const Logo = createElement('img', { className: 'App-logo', src: logo });
+	const Text = createElement('p', null, 'Edit ', createElement('code', null, 'src/App.js'), ' and save to reload.');
+	const Link = createElement(
+		'a',
+		{
+			className: 'App-link',
+			href: 'https://reactjs.org',
+			target: '_blank',
+			rel: 'noopener noreferrer',
+		},
+		'Learn React',
+	);
+	const Year = createElement('h2', null, `${new Date().getFullYear()}`);
+	const Header = createElement('header', { className: 'App-header' }, Logo, Text, Link, Year);
+
+	return createElement('div', { className: 'App' }, Header);
 };
