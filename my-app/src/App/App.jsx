@@ -1,5 +1,5 @@
-import { Form } from './Form/Form';
+import { FormCustom } from './FormCustom/Form';
 
 export const App = () => {
-	return <Form />;
+	return <FormCustom />;
 };
