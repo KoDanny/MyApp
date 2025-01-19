@@ -1,16 +1,27 @@
 import { Loader } from '../../Loader/Loader';
-import { TaskLayout } from '../../Task/Layout/TaskLayout';
 import styles from './TaskListLayout.module.css';
 
-export const TaskListLayout = ({ tasks, isLoading }) => {
-	const taskList = tasks.map((task, index) => (
-		<TaskLayout key={task.id} {...task} index={index} />
-	));
-
+export const TaskListLayout = ({ children, isLoading, setIsSort }) => {
 	return (
 		<div className={styles.taskListContainer}>
-			<h1 className={styles.taskListHeader}>Список текущих задач:</h1>
-			{isLoading ? <Loader /> : taskList}
+			{children.length >= 1 && (
+				<h1 className={styles.taskListHeader}>Список текущих задач:</h1>
+			)}
+			{children.length > 1 && (
+				<div className={styles.checkBoxContainer}>
+					<label className={styles.label}>
+						Сортировать в алфавитном порядке
+					</label>
+					<input
+						className={styles.input}
+						type="checkbox"
+						onClick={({ target: { checked } }) => {
+							setIsSort(checked);
+						}}
+					></input>
+				</div>
+			)}
+			<div className={styles.taskList}>{isLoading ? <Loader /> : children}</div>
 		</div>
 	);
 };

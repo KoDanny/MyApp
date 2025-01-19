@@ -1,0 +1,55 @@
+.form {
+	display: flex;
+	justify-content: space-between;
+	background-color: cadetblue;
+	padding: 20px;
+	text-align: center;
+	margin: 8px 0;
+}
+
+.form * {
+	text-align: center;
+	color: #333;
+	margin: 0 0 5px 0;
+	border: none;
+	padding: 10px;
+	font-size: 18px;
+	font-family: sans-serif;
+}
+
+.form *:focus {
+	outline: 2px solid darkslategrey;
+	outline-offset: -2px;
+}
+
+.input {
+	cursor: pointer;
+	background-color: azure;
+	width: 100%;
+}
+
+.button {
+	background-color: darkslategrey;
+	color: azure;
+}
+
+.label {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
+}
+
+.checkbox {
+	accent-color: green;
+	width: 18px;
+	height: 18px;
+	margin: 0;
+	margin-left: 5px;
+	border-radius: 10px;
+}
+
+.disabled {
+	opacity: 0.7;
+	cursor: not-allowed;
+}
