@@ -1,14 +1,9 @@
 {
-  "tasks": [
-    {
-      "completed": false,
-      "title": "Задача12вы",
-      "id": "61d3"
-    },
-    {
-      "id": "9566",
-      "completed": false,
-      "title": "О"
-    }
-  ]
+	"tasks": [
+		{
+			"id": "1",
+			"completed": false,
+			"title": "Тестовая задача"
+		}
+	]
 }
