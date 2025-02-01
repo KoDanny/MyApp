@@ -1,0 +1,23 @@
+.controlPanel {
+	background-color: lightseagreen;
+	margin-bottom: 1rem;
+}
+
+.controlPanel > * {
+	margin-bottom: 10px;
+}
+
+.addTaskBlock {
+	display: flex;
+}
+
+.searchBlock {
+	display: flex;
+	width: 100%;
+}
+
+.sortBlock {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

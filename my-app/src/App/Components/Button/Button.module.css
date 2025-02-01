@@ -1,0 +1,17 @@
+.button {
+	border: none;
+	height: 2rem;
+	min-width: 20%;
+	margin-bottom: 5px;
+	padding: 5px 10px;
+	background-color: darkslategrey;
+	color: azure;
+	cursor: pointer;
+}
+
+.button:hover {
+	box-shadow:
+		inset 0 0 5px 1px aqua,
+		0 0 5px 1px aqua;
+	color: aqua;
+}

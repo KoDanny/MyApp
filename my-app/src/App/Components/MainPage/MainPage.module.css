@@ -1,0 +1,17 @@
+.app {
+	width: 600px;
+	min-height: 100vh;
+	margin-top: 10px;
+}
+
+.app * {
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.app > * {
+	background-color: lightseagreen;
+	border-radius: 4px;
+	padding: 20px;
+	outline: 1px solid darkslategray;
+}
