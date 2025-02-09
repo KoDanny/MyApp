@@ -1,0 +1,23 @@
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 3px;
+	background-color: azure;
+	margin-bottom: 10px;
+}
+
+.container * {
+	font-size: 1rem;
+}
+
+.buttonContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.text {
+	margin: 0 10px;
+	color: #333;
+}
