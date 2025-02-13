@@ -1,0 +1,35 @@
+.container {
+	display: inline-grid;
+	grid-template-rows: repeat(3, 100px);
+	grid-template-columns: repeat(3, 100px);
+
+	background-color: lightseagreen;
+
+	width: 320px;
+	height: 320px;
+
+	place-content: center;
+	gap: 2px;
+
+	border: 2px solid darkslategray;
+}
+
+.cell {
+	outline: 2px solid darkslategray;
+	width: 100px;
+	height: 100px;
+	background-color: #f0f8ff;
+
+	color: darkslategray;
+	font-size: 60px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	cursor: pointer;
+}
+
+.cell:hover {
+	background-color: #e0e8ee;
+}

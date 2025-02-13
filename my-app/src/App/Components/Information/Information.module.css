@@ -1,0 +1,10 @@
+.container {
+	background-color: lightseagreen;
+	color: darkslategray;
+	padding: 20px;
+	margin-bottom: 5px;
+
+	font-size: 30px;
+	text-align: center;
+	border: 2px solid darkslategray;
+}
