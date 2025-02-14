@@ -1,0 +1,24 @@
+.cell {
+	outline: 2px solid darkslategray;
+	width: 100px;
+	height: 100px;
+	background-color: #f0f8ff;
+
+	color: darkslategray;
+	font-size: 60px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	cursor: pointer;
+}
+
+.winCell {
+	background-color: lightseagreen;
+	color: #f0f8ff;
+}
+
+.cell:hover {
+	opacity: 0.8;
+}

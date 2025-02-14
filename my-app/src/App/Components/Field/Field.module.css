@@ -12,24 +12,5 @@
 	gap: 2px;
 
 	border: 2px solid darkslategray;
-}
-
-.cell {
-	outline: 2px solid darkslategray;
-	width: 100px;
-	height: 100px;
-	background-color: #f0f8ff;
-
-	color: darkslategray;
-	font-size: 60px;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	cursor: pointer;
-}
-
-.cell:hover {
-	background-color: #e0e8ee;
+	margin-bottom: 5px;
 }

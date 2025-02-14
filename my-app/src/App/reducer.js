@@ -1,22 +1,27 @@
 import { INIT_STATE } from './Constants';
+import * as actionType from './Constants';
 
-export const reducer = (state = INIT_STATE, { type, payload }) => {
-	const startState = state;
-
+const appReducer = (state = INIT_STATE, { type, payload }) => {
 	switch (type) {
-		case 'SET_CURRENT_PLAYER':
+		case actionType.SET_CURRENT_PLAYER:
 			return { ...state, currentPlayer: payload };
-		case 'SET_FIELD':
+		case actionType.SET_FIELD:
 			return { ...state, field: payload };
-		case 'SET_GAME_ENDED':
+		case actionType.SET_GAME_ENDED:
 			return { ...state, isGameEnded: payload };
-		case 'SET_WIN_PATTERN':
+		case actionType.SET_WIN_PATTERN:
 			return { ...state, winPattern: payload };
-		case 'SET_DRAW':
+		case actionType.SET_DRAW:
 			return { ...state, isDraw: payload };
-		case 'RESET':
-			return startState;
 		default:
 			return state;
 	}
+};
+
+export const reducer = (state, { type, payload }) => {
+	if (type === actionType.RESET) {
+		state = undefined;
+	}
+
+	return appReducer(state, { type, payload });
 };

@@ -1,0 +1,20 @@
+.buttonContainer {
+	/* background-color: lightseagreen; */
+	/* border: 2px solid darkslategray; */
+	padding: 10px;
+	text-align: center;
+}
+
+.button {
+	cursor: pointer;
+	border: none;
+	padding: 10px 20px;
+	background-color: darkslategray;
+	color: #f0f8ff;
+	font-size: 20px;
+}
+
+button:hover {
+	outline: 2px solid aqua;
+	color: aqua;
+}

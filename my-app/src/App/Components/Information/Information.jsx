@@ -3,18 +3,21 @@ import { useAppState } from '../../Hooks';
 import styles from './Information.module.css';
 
 export const Information = () => {
-	const { state, update } = useAppState();
-
-	const { currentPlayer, isGameEnded } = state;
+	const {
+		state: { currentPlayer, isGameEnded, isDraw },
+		update,
+	} = useAppState();
 
 	useEffect(() => update(), []);
 
-	let message = isGameEnded ? 'игра окончена' : `Ходит: ${currentPlayer}`;
+	const resultGame = isDraw ? 'Ничья' : `Победил игрок ${currentPlayer}`;
+
+	const message = isGameEnded ? resultGame : `Сейчас ходит: ${currentPlayer}`;
 
 	return (
 		<div className={styles.container}>
+			{isGameEnded && <p className={styles.text}>Игра окончена!</p>}
 			<p className={styles.text}>{message}</p>
-			{isGameEnded && <button>Играть снова</button>}
 		</div>
 	);
 };

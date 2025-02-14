@@ -1,5 +1,5 @@
 export const INIT_STATE = {
-	currentPlayer: 'X',
+	currentPlayer: '✖',
 	isGameEnded: false,
 	isDraw: false,
 	field: ['', '', '', '', '', '', '', '', ''],
